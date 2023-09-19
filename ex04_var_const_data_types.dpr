@@ -22,12 +22,23 @@ var
 const
   Pi = 3.14;
   Author = 'Worajedt Sitthidumrong';
+
   { **
     * Do you notice the assignment operator is '='
     * not the ':=' like a variable?
     * Also, data type is assigned automatically by compiler.
     * Constant mean you can't change the value of this defined name
     * along the runtime of application. }
+
+  // Resource String
+  { * it'll be easier to translate every strings later if we define it 
+    * within resourceString. In program, just use the variables as usual.
+    * resourceString store in special part of .exe file.
+    * Also, we can make program execute a bit faster by using resourceString.
+    * }
+resourceString
+  strFile = 'File';
+  strFileOpen = 'Open';
 
 begin
   QueenOfFruit := 'Durian';
