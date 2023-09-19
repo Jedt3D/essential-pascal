@@ -1,0 +1,132 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{21BAC785-8B3F-499E-8406-3B2C0F28BD3B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ex01_hello_pascal.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex02_coding_in_pascal.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex03_operators.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex04_var_const_data_types.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex05_date_time.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex06_type_casting.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex07_pointer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex08_range_enum_set.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ex09_array_record.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ex01_hello_pascal">
+        <MSBuild Projects="ex01_hello_pascal.dproj"/>
+    </Target>
+    <Target Name="ex01_hello_pascal:Clean">
+        <MSBuild Projects="ex01_hello_pascal.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex01_hello_pascal:Make">
+        <MSBuild Projects="ex01_hello_pascal.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex02_coding_in_pascal">
+        <MSBuild Projects="ex02_coding_in_pascal.dproj"/>
+    </Target>
+    <Target Name="ex02_coding_in_pascal:Clean">
+        <MSBuild Projects="ex02_coding_in_pascal.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex02_coding_in_pascal:Make">
+        <MSBuild Projects="ex02_coding_in_pascal.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex03_operators">
+        <MSBuild Projects="ex03_operators.dproj"/>
+    </Target>
+    <Target Name="ex03_operators:Clean">
+        <MSBuild Projects="ex03_operators.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex03_operators:Make">
+        <MSBuild Projects="ex03_operators.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex04_var_const_data_types">
+        <MSBuild Projects="ex04_var_const_data_types.dproj"/>
+    </Target>
+    <Target Name="ex04_var_const_data_types:Clean">
+        <MSBuild Projects="ex04_var_const_data_types.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex04_var_const_data_types:Make">
+        <MSBuild Projects="ex04_var_const_data_types.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex05_date_time">
+        <MSBuild Projects="ex05_date_time.dproj"/>
+    </Target>
+    <Target Name="ex05_date_time:Clean">
+        <MSBuild Projects="ex05_date_time.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex05_date_time:Make">
+        <MSBuild Projects="ex05_date_time.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex06_type_casting">
+        <MSBuild Projects="ex06_type_casting.dproj"/>
+    </Target>
+    <Target Name="ex06_type_casting:Clean">
+        <MSBuild Projects="ex06_type_casting.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex06_type_casting:Make">
+        <MSBuild Projects="ex06_type_casting.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex07_pointer">
+        <MSBuild Projects="ex07_pointer.dproj"/>
+    </Target>
+    <Target Name="ex07_pointer:Clean">
+        <MSBuild Projects="ex07_pointer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex07_pointer:Make">
+        <MSBuild Projects="ex07_pointer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex08_range_enum_set">
+        <MSBuild Projects="ex08_range_enum_set.dproj"/>
+    </Target>
+    <Target Name="ex08_range_enum_set:Clean">
+        <MSBuild Projects="ex08_range_enum_set.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex08_range_enum_set:Make">
+        <MSBuild Projects="ex08_range_enum_set.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ex09_array_record">
+        <MSBuild Projects="ex09_array_record.dproj"/>
+    </Target>
+    <Target Name="ex09_array_record:Clean">
+        <MSBuild Projects="ex09_array_record.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ex09_array_record:Make">
+        <MSBuild Projects="ex09_array_record.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ex01_hello_pascal;ex02_coding_in_pascal;ex03_operators;ex04_var_const_data_types;ex05_date_time;ex06_type_casting;ex07_pointer;ex08_range_enum_set;ex09_array_record"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ex01_hello_pascal:Clean;ex02_coding_in_pascal:Clean;ex03_operators:Clean;ex04_var_const_data_types:Clean;ex05_date_time:Clean;ex06_type_casting:Clean;ex07_pointer:Clean;ex08_range_enum_set:Clean;ex09_array_record:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ex01_hello_pascal:Make;ex02_coding_in_pascal:Make;ex03_operators:Make;ex04_var_const_data_types:Make;ex05_date_time:Make;ex06_type_casting:Make;ex07_pointer:Make;ex08_range_enum_set:Make;ex09_array_record:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
